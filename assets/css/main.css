@@ -486,6 +486,11 @@ a.back-to-top:focus {
 .navbar-light .navbar-toggler i {
   color: #333 !important;
 }
+
+.cont{
+  width: 90%;
+  align-items: center;
+}
 .site-navigation {
   border-radius: 0px;
 }
@@ -495,6 +500,7 @@ a.back-to-top:focus {
     padding: 0 !important;
   }
 }
+
 .navbar-fixed {
   z-index: 99999;
   position: fixed;
@@ -523,7 +529,7 @@ a.back-to-top:focus {
 }
 @media only screen and (max-width: 768px) {
   .navbar-fixed {
-    background: #fff;
+    background: #6e6e6e4b;
   }
   .navbar-fixed.navbar-light .navbar-nav .nav-link {
     color: #333;
