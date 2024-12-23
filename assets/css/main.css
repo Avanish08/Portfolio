@@ -488,8 +488,12 @@ a.back-to-top:focus {
 }
 
 .cont{
+  height: 50px;
   width: 90%;
   align-items: center;
+  .navbar-brand{
+    align-items: center;
+  }
 }
 .site-navigation {
   border-radius: 0px;
