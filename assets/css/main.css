@@ -379,7 +379,7 @@ a.back-to-top i {
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 0 4px rgb(0, 0, 0), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
 a.back-to-top:hover,
 a.back-to-top:focus {
@@ -439,7 +439,7 @@ a.back-to-top:focus {
   }
 }
 .navbar-light .navbar-nav .nav-link {
-  color: #333333;
+  color: #000000;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
@@ -450,7 +450,7 @@ a.back-to-top:focus {
 }
 @media only screen and (max-width: 768px) {
   .navbar-light .navbar-nav .nav-link {
-    color: #333;
+    color: #000000;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -484,7 +484,7 @@ a.back-to-top:focus {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .navbar-light .navbar-toggler i {
-  color: #333 !important;
+  color: #000000 !important;
 }
 
 .cont{
@@ -516,7 +516,7 @@ a.back-to-top:focus {
   -webkit-backface-visibility: hidden;
   border-radius: 0px;
   background-color: #e0e5ec;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgb(0, 0, 0);
 }
 .dark_bg_menu {
   z-index: 99999;
@@ -529,7 +529,7 @@ a.back-to-top:focus {
   -webkit-backface-visibility: hidden;
   border-radius: 0px;
   background-color: #000;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgb(0, 0, 0);
 }
 @media only screen and (max-width: 768px) {
   .navbar-fixed {
