@@ -611,8 +611,9 @@ a.back-to-top:focus {
 
 /* Banner Images */
 .banner-images img {
+  margin-top: 100px;
   max-width: 100%;
-  height: auto;
+  height: 280px;
   border-radius: 50%;
 }
 
