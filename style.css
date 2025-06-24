@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: #0a0a0a;
+  font-size: 18px;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #0a0a0a;
+  font-size: 18px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+}
+
+.logo {
+  
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #00ffd5;
+  color: #000;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.intro {
+  margin-top: 20vh;
+}
+
+.name {
+  color: #00ffd5;
+}
+
+.typing-loop {
+  font-size: 1.5rem;
+  color: #00ffd5;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  color: #00ffd5;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+#logo{
+height:50px;
+margin:0;
+padding:0;
+}
+
+#categories {
+  background: #111;
+  padding: 60px 20px;
+}
+
+.category-blocks button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.category-blocks button:hover {
+  background-color: #00ffd5;
+  color: #000;
+}
+
+.category-blocks button.active {
+  background-color: #00ffd5;
+  color: #000;
+  font-weight: 600;
+}
+
+.gallery, .blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img, .blog-posts img {
+  width: 220px;
+  border: 2px solid #00ffd5;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover, .blog-posts img:hover {
+  transform: scale(1.05);
+}
+
+.blog-posts .post {
+  max-width: 220px;
+  text-align: left;
+}
+#contact {
+  background: #111;
+  padding: 40px 20px; /* Decreased from ~80px */
+  text-align: center;
+  min-height: auto;   /* Ensure no forced height */
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
