@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -9,24 +10,19 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
+  font-family: 'Poppins', sans-serif;
   background: #0a0a0a;
+  color: #fff;
   font-size: 18px;
 }
 
+/* Headings */
 h1, h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  background: #0a0a0a;
-  font-size: 18px;
-}
-
+/* Navbar */
 nav {
   position: sticky;
   top: 0;
@@ -46,10 +42,19 @@ nav {
   padding: 12px 20px;
 }
 
-.logo {
-  
+#logo {
+ height:50px;
 }
 
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #00ffd5;
+}
+
+/* Nav links for desktop */
 .nav-links {
   list-style: none;
   display: flex;
@@ -70,6 +75,16 @@ nav {
   color: #000;
 }
 
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #00ffd5;
+}
+
+/* Section Styling */
 section {
   min-height: 100vh;
   padding: 80px 20px;
@@ -77,13 +92,14 @@ section {
 }
 
 .intro {
-  margin-top: 20vh;
+  margin-top: 35vh;
 }
 
 .name {
   color: #00ffd5;
 }
 
+/* Typing Text */
 .typing-loop {
   font-size: 1.5rem;
   color: #00ffd5;
@@ -101,15 +117,18 @@ section {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-#logo{
-height:50px;
-margin:0;
-padding:0;
-}
 
+/* Categories */
 #categories {
   background: #111;
   padding: 60px 20px;
+}
+
+.category-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .category-blocks button {
@@ -123,17 +142,14 @@ padding:0;
   transition: background-color 0.3s;
 }
 
-.category-blocks button:hover {
-  background-color: #00ffd5;
-  color: #000;
-}
-
+.category-blocks button:hover,
 .category-blocks button.active {
   background-color: #00ffd5;
   color: #000;
   font-weight: 600;
 }
 
+/* Portfolio and Blog Gallery */
 .gallery, .blog-posts {
   display: flex;
   flex-wrap: wrap;
@@ -157,11 +173,12 @@ padding:0;
   max-width: 220px;
   text-align: left;
 }
+
+/* Contact Section */
 #contact {
   background: #111;
-  padding: 40px 20px; /* Decreased from ~80px */
+  padding: 40px 20px;
   text-align: center;
-  min-height: auto;   /* Ensure no forced height */
 }
 
 #contact h2 {
@@ -172,4 +189,95 @@ padding:0;
 #contact p {
   margin: 8px 0;
   font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+ .navbar-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .intro {
+    margin-top: 35vh;
+    padding: 0 5px;
+    
+  }
+
+  .typing-loop {
+    font-size: 1.2rem;
+  }
+
+  .gallery img, .blog-posts img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .gallery, .blog-posts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-posts .post {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .typing-loop {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .category-blocks button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
 }
