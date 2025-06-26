@@ -105,6 +105,7 @@ nav {
 .nav-links a:hover {
   background-color: #00ffd5;
   color: #000;
+  cursor: pointer;
 }
 
 
@@ -179,6 +180,7 @@ section {
   background-color: #00ffd5;
   color: #000;
   font-weight: 600;
+  cursor: pointer;
 }
 
 /* Portfolio and Blog Gallery */
@@ -199,6 +201,7 @@ section {
 
 .gallery img:hover, .blog-posts img:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .blog-posts .post {
