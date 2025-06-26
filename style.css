@@ -209,13 +209,12 @@ section {
 /* Contact Section */
 #contact {
   background: #111;
-  padding: 40px 20px;
   text-align: center;
 }
 
 #contact h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+
 }
 
 #contact p {
