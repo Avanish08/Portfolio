@@ -1,145 +1,145 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Typing Text Animation
-  const roles = [
-    "Game Designer | 2D Artist | Animator | Script Writer"
-  ];
-  let currentRole = 0;
-  let currentText = "";
-  let isDeleting = false;
-  const speed = 100;
-  const typingText = document.getElementById("typing-text");
+// Wait for page to fully load
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    preloader.style.pointerEvents = 'none';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
+});
 
-  function typeLoop() {
-    const fullText = roles[currentRole];
+// Custom Cursor
+const cursor = document.getElementById('custom-cursor');
 
+document.addEventListener('mousemove', (e) => {
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+});
+
+// Typing Loop Effect
+const typingText = document.getElementById('typing-text');
+const words = ['Game Designer', 'Script Writer', '2D Artist', 'Animator'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let delay = 100;
+
+function typeLoop() {
+    const currentWord = words[wordIndex];
     if (isDeleting) {
-      currentText = fullText.substring(0, currentText.length - 1);
+        typingText.textContent = currentWord.substring(0, charIndex--);
+        delay = 50;
+        if (charIndex < 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            delay = 300;
+        }
     } else {
-      currentText = fullText.substring(0, currentText.length + 1);
+        typingText.textContent = currentWord.substring(0, charIndex++);
+        delay = 100;
+        if (charIndex > currentWord.length) {
+            isDeleting = true;
+            delay = 1000;
+        }
     }
-
-    typingText.innerHTML = currentText;
-
-    let delay = isDeleting ? speed / 2 : speed;
-
-    if (!isDeleting && currentText === fullText) {
-      delay = 1500;
-      isDeleting = true;
-    } else if (isDeleting && currentText === "") {
-      isDeleting = false;
-      currentRole = (currentRole + 1) % roles.length;
-      delay = 500;
-    }
-
     setTimeout(typeLoop, delay);
-  }
+}
+typeLoop();
 
-  typeLoop();
+// Category Filter Logic
+const filterButtons = document.querySelectorAll('.category-blocks button');
+const galleryItems = document.querySelectorAll('.gallery img');
 
-  // Category Filtering
-  const buttons = document.querySelectorAll('.category-blocks button');
-  const images = document.querySelectorAll('.gallery img');
-
-  buttons.forEach(button => {
+filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter');
+        const category = button.getAttribute('data-filter');
 
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+        // Toggle active button class
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-      images.forEach(img => {
-        const category = img.getAttribute('data-category');
-        img.style.display = (filter === 'all' || category === filter) ? 'block' : 'none';
-      });
+        // Filter gallery items
+        galleryItems.forEach(item => {
+            const itemCategory = item.getAttribute('data-category');
+            if (category === 'all' || itemCategory === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
     });
+});
+
+// Hamburger menu toggle for mobile
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
+});
 
-  // Hamburger Menu
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-
-  // Initialize particles.js
-  if (document.getElementById("particles-js")) {
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 }},
-        color: { value: "#00ffd5" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5, random: true },
-        size: { value: 3, random: true },
-        line_linked: {
+// Initialize particles.js
+document.addEventListener("DOMContentLoaded", () => {
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 80,
+        density: {
           enable: true,
-          distance: 150,
-          color: "#00ffd5",
-          opacity: 0.3,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          out_mode: "bounce"
+          value_area: 800
         }
       },
-      interactivity: {
-        events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" }
+      color: {
+        value: "#00ffff"
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.5,
+        random: false
+      },
+      size: {
+        value: 3,
+        random: true
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#00ffff",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: {
+          enable: true,
+          mode: "repulse"
         },
-        modes: {
-          repulse: { distance: 100 },
-          push: { particles_nb: 4 }
+        onclick: {
+          enable: true,
+          mode: "push"
         }
       },
-      retina_detect: true
-    });
-  }
-
-  // Custom cursor movement
-  const customCursor = document.getElementById('custom-cursor');
-  window.addEventListener('mousemove', (e) => {
-    customCursor.style.left = e.clientX + 'px';
-    customCursor.style.top = e.clientY + 'px';
+      modes: {
+        repulse: {
+          distance: 100
+        },
+        push: {
+          particles_nb: 4
+        }
+      }
+    },
+    retina_detect: true
   });
-
- // Section reveal with IntersectionObserver + staggered animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("reveal");
-    } else {
-      entry.target.classList.remove("reveal"); // remove if you want re-animation on scroll up
-    }
-  });
-}, {
-  threshold: 0.15 // 15% visible to trigger
 });
 
-// Loop through all sections and apply stagger + custom animation class
-document.querySelectorAll("section").forEach((section, index) => {
-  const delay = (index * 0.1 + Math.random() * 0.05).toFixed(2); // slight randomness
-  section.style.transitionDelay = `${delay}s`;
-
-  // Optional: support per-section animation type via data-animation
-  const animationType = section.dataset.animation || "fade-up"; // default
-  section.classList.add(animationType); // e.g., fade-up, fade-left, zoom-in
-
-  observer.observe(section);
-});
-
-
-
-});
-
-// Preloader
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  preloader.style.opacity = "0";
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 500);
-});
