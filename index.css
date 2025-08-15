@@ -222,7 +222,15 @@
 
   }
 
-/* Mobile (≤ 480px) */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: url('./assets/logo/cursor.cur'), auto;
+  }
+
+  button:hover {
+    cursor: url('./assets/logo/cursor (1).cur'), auto;
+  }
+}
 /* Mobile (≤ 480px) */
 @media (max-width: 480px) {
   body {
@@ -230,7 +238,11 @@
   }
 
   header {
-    padding: 40px 10px;
+     padding: 40px 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   header h1 {
@@ -298,3 +310,4 @@
     padding: 15px;
   }
 }
+
