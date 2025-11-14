@@ -1,133 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avanish Ojha __ Portfolio
-    </title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Avanish Ojha Portfolio — Creative Designer & Game Dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    window.addEventListener('load', function () {
-        document.getElementById('preloader').style.display = 'none';
-    });
-</script>
-
 <body>
-    <div id="preloader">
-        <div class="loader"></div>
+  <div id="preloader">
+    <div class="car"></div>
+    <div class="road"></div>
+    <p style="color:#00ffe1;margin-top:20px;font-weight:600;">Loading Garage...</p>
+  </div>
+
+  <header>
+    <div class="logo">AV</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
     </div>
-
-    <header>
-        <h1>Avanish Ojha</h1>
-        <p>2D Animator | Artist | Storyteller</p>
-    </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#work">My Work</a>
-        <a href="#contact">Contact</a>
+    <nav id="navbar">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm Avanish Ojha, a passionate 2D animator who brings stories to life with movement and emotion. From
-            character animation to visual storytelling, I specialize in frame-by-frame magic and fun, expressive
-            visuals.
-        </p>
-        <div class="right-img tp">
-            <div class="text">
-                <p><b>
-                    About Me as a 2D Artist </b></p>
-                    <p>
-                     I craft vibrant, expressive illustrations that capture personality 
-                     and emotion in every line. Whether it’s character design, concept art, 
-                     or detailed scenes, I focus on bringing charm, depth, and a unique storytelling 
-                     voice to each piece.
-                </p>
-            </div>
-            <div class="imgr">
-                <img src="./assest/img/drW.png" alt="" class="rp">
-            </div>
-        </div>
-        <div class="left-img tp">
-            <div class="imgr">
-                <img src="" alt="animation1" class="rp">
-            </div>
-            <div class="text">
-                <p><b>
-                    About Me as an Animator </b></p>
-                    <p>
-                    I transform still images into living, breathing moments through 
-                    the art of animation. From subtle gestures to dynamic action,
-                     my work blends storytelling and motion to create engaging, 
-                     memorable experiences that connect with audiences.
-                </p>
-            </div>
-        </div>
-    </section>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Avanish Ojha <br> <span> Designer | Game Developer | 2D Animator | Artist | Script writer</span></h1>
+      <p>I’m a creative designer, artist, and Unity & Godot developer who blends art and code to build immersive digital experiences.</p>
+      <button class="btn" id="view-work">View My Work</button>
+    </div>
+  </section>
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <p>
+          I’m <span>Avanish Ojha </span>, a passionate 2D Animator and Game Developer who loves bringing stories to life through expressive visuals and engaging gameplay. With a strong foundation in animation, scripting, and game design, I specialize in crafting fun, dynamic experiences that blend creativity and technology. 
+          <br>
+          I develop 2D games using Unity and Godot, and have created several projects, including:<br><br>
+          <span>
+          > Snake Game<br>
+          > Tic-Tac-Toe<br>
+          > Rock–Paper–Scissors (Python)<br>
+          > Cube Shooter Arena<br>
+          </span>
+          <br>
+          I’m currently working on an exciting new 2d game project  to deliver a unique player experience.<br>
+          Alongside development, I’m also a scriptwriter, having written multiple game scripts that focus on narrative depth and player engagement.<br>
+          I’ve completed a Unity Game Development Certification, and proudly participated in BYOG 2025 (Build Your Own Game), showcasing my skills in both design and development.<br>
+      </p>
+    </div>
+  </section>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="design">Design</button>
+      <button class="filter" data-filter="3d">3D</button>
+      <button class="filter" data-filter="Animation">Animation</button>
+      <button class="filter" data-filter="game">Game</button>
+      <button class="filter" data-filter="unity">Unity</button>
+      <button class="filter" data-filter="2d-artist">2D Art</button>
+    </div>
+    <div class="grid" id="grid">
+      <div class="card" data-tags="design"><div class="thumb">Branding Concept</div><div class="meta">UI/UX Visuals</div></div>
+      <div class="card" data-tags="3d"><div class="thumb">3D Asset Pack</div><div class="meta">Low Poly Models</div></div>
+      <div class="card" data-tags="Animation"><div class="thumb"><video src="assest\video\anima.mp4"  class="hover-video"></video></div><div class="meta">Animation 1</div></div>
+      <div class="card" data-tags="unity game"><div class="thumb">Platformer Prototype</div><div class="meta">Unity Game System</div></div>
+      <div class="card" data-tags="design"><div class="thumb">HUD Design</div><div class="meta">Game Interface</div></div>
+      <div class="card" data-tags="2d-artist"><div class="thumb"><img src="assest\img\selfchar.jpg" alt="Alt" ></div><div class="meta">Self Character</div></div>
+      <div class="card" data-tags="2d-artist"><div class="thumb"><img src="assest\img\bus.jpg" alt="Alt" ></div><div class="meta">School couple</div></div>
+      <div class="card" data-tags="2d-artist"><div class="thumb"><img src="assest\img\drW.png" alt="Alt" ></div><div class="meta">Dr W</div></div>
+      <div class="card" data-tags="2d-artist"><div class="thumb"><img src="assest\img\olbr.jpg" alt="Alt" ></div><div class="meta">Devil Reborn</div></div>
+      <div class="card" data-tags="2d-artist"><div class="thumb"><img src="assest\img\ytscript.png" alt="Alt" ></div><div class="meta">Lady Boss</div></div>
+      <div class="card" data-tags="2d-artist"><div class="thumb"><img src="assest\img\Drawlighttwocouple.jpg" alt="Alt" ></div><div class="meta">Cute couple</div></div>
+      <div class="card" data-tags="3d unity"><div class="thumb">Environment Scene</div><div class="meta">Unity Integration</div></div>
+      <div class="card" data-tags="game"><div class="thumb">Snake Game</div><div class="meta">Snake Game</div></div>
+      <div class="card" data-tags="game"><div class="thumb">Tic Tac Toe</div><div class="meta">Tic Tac Toe</div></div>
+      <div class="card" data-tags="game"><div class="thumb">Rock Paper scissor</div><div class="meta">Rock Paper scissor </div></div>
+      <div class="card" data-tags="game"><div class="thumb">2d Fighter</div><div class="meta">2d Fighter</div></div>
+    </div>
+  </section>
 
-    <section id="work">
-        <h2>My Work</h2>
-        <div class="category-blocks">
-            <button data-filter="all" class="active">All</button>
-            <button data-filter="artist">2D Artist</button>
-            <button data-filter="animation">Animation</button>
-        </div>
-        <div class="portfolio">
-            <div class="project">
-                <video src="./assest/video/anima.mp4"  class="anima" data-category="animation"  loop></video>
-                <h3>Street Style Showdown</h3>
-            </div>
-            <div class="project">
-                <video src=""  class="anima" data-category="animation"  loop></video>
-                <h3>Daily Life of a Chaiwala</h3>
-            </div>
-            <div class="project">
-                <video src=""  class="anima" data-category="animation"  loop></video>
-                <h3>Animated Logo – XYZ Channel</h3>
-            </div>
-            <div class="project">
-                <img src="./assest/img/Drawlighttwocouple.jpg" alt="Project 2" data-category="artist"/>
-                <h3>Cute Couple</h3>
-            </div>
-            <div class="project">
-                <img src="./assest/img/olbr.jpg" alt="Project 3" data-category="artist"/>
-                <h3>Devil Reborn</h3>
-            </div>
-            <div class="project">
-                <img src="./assest/img/ytscript.png" alt="Project 1"  data-category="artist"/>
-                <h3>Lady Boss</h3>
-            </div>
-            <div class="project">
-                <img src="./assest/img/drW.png" alt="Project 2" data-category="artist"/>
-                <h3>Dr W</h3>
-            </div>
-            <div class="project">
-                <img src="./assest/img/bus.jpg" alt="Project 1"  data-category="artist"/>
-                <h3>School Couple</h3>
-            </div>
-            <div class="project">
-                <img src="./assest/img/selfchar.jpg" alt="Project 3" data-category="artist"/>
-                <h3>First drawing</h3>
-            </div>
-        </div>
-    </section>
+  <section id="skills" class="section">
+    <h2>Skills & Tools</h2>
+    <div class="skills-grid">
+      <div class="skill">Unity</div>
+      <div class="skill">Godot</div>
+      <div class="skill">Blender</div>
+      <div class="skill">Photoshop</div>
+      <div class="skill">Illustrator</div>
+      <div class="skill">C# / JS</div>
+      <div class="skill">Shader Graph</div>
+      <div class="skill">Krita</div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Let's create something amazing together!</p>
-        <a href="mailto:ak.dis0302@gmail.com">ak.dis0302@gmail.com</a>
-    </section>
-    <footer>
-        <p>&copy;
-            <script>document.write(new Date().getFullYear());</script> Avanish Ojha
-        </p>
-    </footer>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="contact-card">
+        <p>Have a project idea or collaboration? Let’s connect!</p>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="4" placeholder="Message"></textarea>
+        <button class="btn">Send</button>
+      </div>
+      <div class="contact-card">
+        <h3>Links</h3>
+        <p>GitHub: <a href="https://github.com/Avanish08">Avanish08</a></p>
+        <p>Email: <a href="mailto:avanish.00@zohomail.in">avanish.00@zohomail.in</a></p>
+        <!-- <p>ArtStation: /qwerty</p>-->
+        <p>LinkedIn:<a href="https://www.linkedin.com/in/avanishojha08">Avanish Ojha</a></p> 
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">© 2025 Avanish Ojha 
+      — Designer • Game Dev • Unity Developer</footer>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>
