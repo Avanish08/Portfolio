@@ -1,38 +1,40 @@
-window.addEventListener('load', () => {
-      const loader = document.getElementById('preloader');
-      loader.style.opacity = '0';
-      setTimeout(() => loader.style.display = 'none', 500);
+// Smooth scroll for navigation
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.querySelector(e.target.getAttribute("href"));
+        target.scrollIntoView({ behavior: "smooth" });
+    });
+});
+// Infinite horizontal parallax background
+let positionX = 0;
+
+function animateBackground() {
+    positionX -= 0.5; // speed (negative = moves left, positive = moves right)
+    document.querySelector(".parallax").style.backgroundPosition = `${positionX}px center`;
+    requestAnimationFrame(animateBackground);
+}
+
+animateBackground();
+// Autoplay video preview on hover
+document.querySelectorAll(".project-card").forEach(card => {
+    const video = card.querySelector(".preview-video");
+
+    card.addEventListener("mouseenter", () => {
+        video.currentTime = 0;
+        video.play();
     });
 
-    const filters = document.querySelectorAll('.filter');
-    const cards = document.querySelectorAll('.card');
-    filters.forEach(btn => btn.addEventListener('click', () => {
-      filters.forEach(f => f.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter;
-      cards.forEach(c => {
-        const tags = c.dataset.tags.split(' ');
-        c.style.display = (f === 'all' || tags.includes(f)) ? '' : 'none';
-      });
-    }));
-
-    document.getElementById('view-work').onclick = () => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('navbar');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
+    card.addEventListener("mouseleave", () => {
+        video.pause();
     });
+});
 
-    const videos = document.querySelectorAll('.hover-video');
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hidden");
 
-  videos.forEach(video => {
-    video.addEventListener('mouseenter', () => {
-      video.play();
-    });
-
-    video.addEventListener('mouseleave', () => {
-      video.pause();
-      video.currentTime = 0; // restart when hover ends (optional)
-    });
-  });
+    setTimeout(() => {
+        preloader.style.display = "none";
+    }, 600);
+});
