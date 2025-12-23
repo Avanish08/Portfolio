@@ -1,0 +1,382 @@
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ===========================
+   GAME STYLE PRELOADER
+=========================== */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.6s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-box {
+    text-align: center;
+}
+
+.loading-text {
+    color: #ff580a;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* Bar container */
+.loading-bar {
+    width: 300px;
+    height: 15px;
+    background: #1b1b1b;
+    border: 2px solid #b85301;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ad1602af;
+}
+
+/* Progress bar */
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #e64100, #f17831);
+    animation: loadingAnim 2.5s infinite;
+    box-shadow: 0 0 15px #ff5100;
+}
+
+/* Keyframes */
+@keyframes loadingAnim {
+    0% { width: 0%; }
+    50% { width: 90%; }
+    100% { width: 100%; }
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* PARALLAX BACKGROUND */
+.parallax {
+    background-image: url('ParalexBG4.jpg');
+    background-position: 0 center;
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+/* CTA BUTTON */
+.cta {
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 80px;
+}
+
+.dark {
+    background: #151515;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* Card hover lift */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* MEDIA WRAPPER FOR VIDEO PREVIEW */
+.media-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.media-wrapper img,
+.media-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+/* Thumbnail zoom fade */
+.project-card:hover .thumbnail {
+    transform: scale(1.15);
+    opacity: 0;
+}
+
+/* Video reveal on hover */
+.preview-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.project-card:hover .preview-video {
+    opacity: 1;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+/* BADGES */
+.badges {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    background: #2b2b2b;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+/* Badge variations */
+.badge.engine {
+    background: #1e2a3a;
+    border-color: #2e4a6a;
+}
+
+.badge.type {
+    background: #3a1e1e;
+    border-color: #6a2e2e;
+}
+
+/* PROJECT BUTTON */
+.project-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background: #ff4f0a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #cc1f00;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    padding: 20px;
+    background: #222;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-item:hover {
+    background: #333;
+}
+
+/* ABOUT */
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-content img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+.contact-text {
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a0a0a;
+}
+
+/* --------------------- */
+/* RESPONSIVE DESIGN     */
+/* --------------------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .section {
+        padding: 80px 40px;
+    }
+
+    .media-wrapper {
+        height: 180px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 25px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding-left: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 80%;
+    }
+
+    .media-wrapper {
+        height: 160px;
+    }
+}
