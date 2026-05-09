@@ -1,0 +1,219 @@
+/* ================= TABLET & MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* SIDEBAR */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 1000;
+    width: 240px;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* OVERLAY */
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* CONTENT */
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* TOPBAR */
+  .topbar {
+    padding: 0 15px;
+  }
+
+  .menu-btn {
+    display: block !important;
+  }
+
+  .close-btn {
+    display: block !important;
+  }
+
+  /* MAIN */
+  main {
+    padding: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 60vh;
+    border-radius: 14px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .hero-bg {
+    animation-duration: 60s;
+  }
+
+  /* STATS */
+  .stats {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stat {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* PROJECTS */
+  .projects {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: 240px;
+  }
+   .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    font-size: 14px;
+  }
+   .about-container {
+    padding: 25px;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    margin: 0;
+  }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  /* TOPBAR */
+  .topbar {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+  .topbar h2 {
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 55vh;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* TOGGLE BUTTONS */
+  .toggle {
+    display: flex;
+    gap: 5px;
+  }
+
+  .toggle button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    width: 220px;
+    padding-top: 50px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  /* CARDS */
+  .card {
+    height: 220px;
+    border-radius: 14px;
+  }
+
+  .project h3 {
+    font-size: 18px;
+  }
+
+  .project p {
+    font-size: 13px;
+  }
+
+  /* SKILLS */
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skills span {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  /* FOOTER */
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+  }
+}

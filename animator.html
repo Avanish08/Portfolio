@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animator Portfolio</title>
+
+  <!-- FIXED PATH -->
+  <link rel="icon" type="image/png" href="./Asset/logo/LOGO.png" />
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./responsive.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="logo">IDKA</h2>
+      <p class="tag">Creative Animator</p>
+
+      <ul class="nav">
+        <li class="nav-item active" data-section="home" onclick="scrollToSection('home', this)">🏠 Home</li>
+        <li class="nav-item" data-section="projects" onclick="scrollToSection('projects', this)">🚀 Projects</li>
+        <li class="nav-item" data-section="skills" onclick="scrollToSection('skills', this)">🧠 Skills</li>
+        <li class="nav-item" data-section="contact" onclick="scrollToSection('contact', this)">📞 Contact</li>
+      </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+
+        <div class="top-left">
+          <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+          <h2>Dashboard</h2>
+        </div>
+
+        <div class="toggle">
+          <a href="index.html"><button>🎮</button></a>
+          <a href="animator.html"><button class="active">🎨</button></a>
+        </div>
+
+      </header>
+
+      <!-- MAIN -->
+      <main>
+
+        <div class="section active">
+
+          <!-- HOME -->
+          <h1 id="home">Animator 🎨</h1>
+          <p>
+            I create expressive character animations and cinematic sequences
+            focused on realism, timing, and storytelling.
+          </p>
+
+          <!-- STATS -->
+          <div class="stats">
+            <div class="stat">🎬 60+ Animations</div>
+            <div class="stat">🧍 Character Rigging</div>
+            <div class="stat">🎥 Cinematic Scenes</div>
+          </div>
+          <!-- ABOUT -->
+          <section class="about-section">
+
+            <div class="about-container">
+
+              <div class="about-text">
+
+                <h2>About Me</h2>
+
+                <p>
+                  Hi, I'm <span>Avanish</span>, a passionate Animator focused on creating
+                  expressive character performances, cinematic storytelling, and immersive
+                  visual experiences.
+                </p>
+
+                <p>
+                  I specialize in character animation, rigging, motion capture cleanup,
+                  and cinematic sequences using industry-standard tools like Blender and Maya.
+                  My work combines realism, timing, and emotion to bring characters and worlds to life.
+                </p>
+
+                <p>
+                  I enjoy experimenting with movement, camera language, and visual storytelling
+                  to create animations that feel dynamic, polished, and engaging for players and audiences.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+          <!-- PROJECTS -->
+          <h2 id="projects">Projects</h2>
+
+          <div class="projects">
+
+            <div class="card project">
+              <video src="./Asset/video/walk.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>Walk Cycle</h3>
+                <p>Realistic human walk cycle with weight and balance.</p>
+              </div>
+            </div>
+
+            <div class="card project">
+              <video src="./Asset/video/fight.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>Fight Scene</h3>
+                <p>Dynamic combat animation with motion capture polish.</p>
+              </div>
+            </div>
+
+            <div class="card project">
+              <video src="./Asset/video/idle.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>Idle Animation</h3>
+                <p>Subtle breathing and movement for game characters.</p>
+              </div>
+            </div>
+
+            <div class="card project">
+              <video src="./Asset/video/cinematic.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>Cinematic Shot</h3>
+                <p>Short cinematic animation with lighting and camera work.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SKILLS -->
+          <h2 id="skills">Skills</h2>
+
+          <div class="skills">
+            <span>🎨 Blender</span>
+            <span>🎬 Krita</span>
+            <span>🧠 Rigging</span>
+            <span>🎥 Cinematics</span>
+            <span>⚡ Motion Capture</span>
+            <span>⚡ OpenToonz</span>
+          </div>
+
+          <!-- CONTACT -->
+          <h2 id="contact">Contact</h2>
+
+          <div class="contact-container">
+
+            <form class="contact-form" id="contactForm">
+
+              <div class="input-box">
+                <input type="text" id="name" placeholder="Your Name" required>
+              </div>
+
+              <div class="input-box">
+                <input type="email" id="email" placeholder="Your Email" required>
+              </div>
+
+              <div class="input-box">
+                <input type="text" id="subject" placeholder="Subject">
+              </div>
+
+              <div class="input-box">
+                <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+              </div>
+
+              <button type="submit" class="contact-btn">
+                Send Message 🚀
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

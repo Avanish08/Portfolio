@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avanish GameX Portfolio</title>
+
+  <!-- FIXED favicon path -->
+  <link rel="icon" type="image/png" href="./Asset/logo/LOGO.png" />
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./responsive.css">
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <button class="close-btn" onclick="toggleSidebar()">✕</button>
+
+      <h2 class="logo">GameX</h2>
+      <p class="tag">Creative Developer</p>
+
+      <ul class="nav">
+        <li class="nav-item active" data-section="home" onclick="scrollToSection('home', this)">🏠 Home</li>
+        <li class="nav-item" data-section="projects" onclick="scrollToSection('projects', this)">🚀 Projects</li>
+        <li class="nav-item" data-section="skills" onclick="scrollToSection('skills', this)">🧠 Skills</li>
+        <li class="nav-item" data-section="contact" onclick="scrollToSection('contact', this)">📞 Contact</li>
+      </ul>
+    </aside>
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+
+        <!-- LEFT SIDE -->
+        <div class="top-left">
+          <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+          <h2>Dashboard</h2>
+        </div>
+
+        <!-- TOGGLE -->
+        <div class="toggle">
+          <a href="index.html"><button class="active">🎮</button></a>
+          <a href="inprogress.html"><button>🎨</button></a>
+        </div>
+
+      </header>
+
+      <!-- MAIN -->
+      <main>
+
+        <div class="section active">
+          <h1 id="home"></h1>
+          <section class="hero">
+            <div class="hero-bg"></div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+              <h1>Game Developer 🎮</h1>
+              <p>
+                I design and build immersive gameplay systems with a focus on performance,
+                player experience, and scalable architecture.
+              </p>
+            </div>
+          </section>
+
+          <!-- STATS -->
+          <div class="stats">
+            <div class="stat">🎯 8+ Projects</div>
+            <div class="stat">🕹️ Unity & C#</div>
+            <div class="stat">⚡ Godot & Gameplay Systems</div>
+          </div>
+          <!-- ABOUT -->
+          <section class="about-section">
+
+            <div class="about-container">
+
+              <div class="about-text">
+
+                <h2>About Me</h2>
+
+                <p>
+                  Hi, I'm <span>Avanish</span>, a passionate Game Developer focused on
+                  creating immersive gameplay experiences and interactive worlds.
+                  I specialize in gameplay systems, AI mechanics, multiplayer features,
+                  and performance optimization using modern game engines.
+                </p>
+
+                <p>
+                  My goal is to design games that feel smooth, engaging, and memorable.
+                  I enjoy experimenting with mechanics, solving technical challenges,
+                  and turning creative ideas into playable experiences.
+                </p>
+
+                <p>
+                  Alongside development, I also explore animation, cinematic design,
+                  and visual storytelling to create complete player experiences.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+          <!-- PROJECTS -->
+          <h2 id="projects">Projects</h2>
+
+          <div class="projects">
+
+            <div class="card project">
+              <video src="./Assets/video/Cubeshotterarena.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>FPS Shooter</h3>
+                <p>Cube based FPS with recoil system, AI bots, .</p>
+              </div>
+            </div>
+
+            <div class="card project">
+              <video src="./Assets/video/Shadowrunner.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>Shadow runner</h3>
+                <p>A 2 level platformer Game </p>
+              </div>
+            </div>
+
+            <div class="card project">
+              <video src="./Assets/video/Guild Startship.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>Guild Starship</h3>
+                <p>Endless space exploration game
+                </p>
+              </div>
+            </div>
+
+            <div class="card project">
+              <video src="./Assets/video/Snake.mp4" muted loop></video>
+              <div class="card-content">
+                <h3>Snake Game</h3>
+                <p>A classic snake game with modern graphics and sound effects.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SKILLS -->
+          <h2 id="skills">Skills</h2>
+
+          <div class="skills">
+            <span>🎮 Unity</span>
+            <span>⚙️ Unreal Engine</span>
+            <span>💻 C#</span>
+            <span>🧠 Game AI</span>
+            <span>🌐 Multiplayer</span>
+          </div>
+
+          <!-- CONTACT -->
+          <h2 id="contact">Contact</h2>
+
+          <div class="contact-container">
+
+            <form class="contact-form" id="contactForm">
+
+              <div class="input-box">
+                <input type="text" id="name" placeholder="Your Name" required>
+              </div>
+
+              <div class="input-box">
+                <input type="email" id="email" placeholder="Your Email" required>
+              </div>
+
+              <div class="input-box">
+                <input type="text" id="subject" placeholder="Subject">
+              </div>
+
+              <div class="input-box">
+                <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+              </div>
+
+              <button type="submit" class="contact-btn">
+                Send Message 🚀
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+        <footer class="footer">
+
+          <div class="footer-content">
+
+            <h3 class="footer-logo">GameX</h3>
+
+            <p class="footer-text">
+              Building immersive worlds & gameplay experiences 🎮
+            </p>
+
+            <div class="footer-links">
+              <a href="https://github.com/Avanish08">GitHub</a>
+              <a href="https://www.linkedin.com/in/avanishojha08">LinkedIn</a>
+              <a href="mailto:avanish.00@zohomail.in">Email</a>
+            </div>
+
+            <p class="footer-copy">
+              © 2026 Avanish | All Rights Reserved
+            </p>
+
+          </div>
+
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
