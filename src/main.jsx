@@ -10,34 +10,42 @@ const profile = {
   name: "Avanish Ojha",
   email: "avanish.00@zohomail.in",
   location: "Noida, India",
+  phone: "+91 75591 55702",
   linkedin: "https://www.linkedin.com/in/avanishojha08/",
-  portfolio: "https://avanishojha.netlify.app/",
+  github: "https://github.com/Avanish08/",
 };
 
 const skills = [
   { title: "Python & Programming", icon: Code2, items: ["Python", "JavaScript ES6+", "SQL", "HTML5", "CSS3"] },
-  { title: "Machine Learning", icon: BrainCircuit, items: ["Supervised Learning", "Unsupervised Learning", "Classification", "Regression", "Clustering", "Model Evaluation"] },
-  { title: "Data Science", icon: Database, items: ["Pandas", "NumPy", "Matplotlib", "EDA", "Data Cleaning", "Data Visualization"] },
-  { title: "AI & Deep Learning", icon: Sparkles, items: ["Artificial Intelligence", "Neural Networks", "Deep Learning Fundamentals", "NLP Fundamentals", "Generative AI"] },
-  { title: "Web & Backend", icon: Code2, items: ["React.js", "Node.js", "Express.js", "REST APIs", "API Integration"] },
-  { title: "Tools & Databases", icon: Database, items: ["MongoDB", "Git", "GitHub", "Jupyter", "Google Colab", "VS Code", "Postman"] },
+  { title: "AI & Machine Learning", icon: BrainCircuit, items: ["Machine Learning", "Supervised Learning", "Unsupervised Learning", "Classification", "Regression", "Model Evaluation"] },
+  { title: "Computer Vision", icon: Sparkles, items: ["YOLOv8", "Object Detection", "Number Plate Detection", "Movement Detection", "Image Processing"] },
+  { title: "Data Science", icon: Database, items: ["Pandas", "NumPy", "Scikit-learn", "EDA", "Data Cleaning", "Data Visualization"] },
+  { title: "AI Fundamentals", icon: BrainCircuit, items: ["Artificial Intelligence", "Deep Learning Fundamentals", "NLP Fundamentals", "Generative AI"] },
+  { title: "Web & Backend", icon: Code2, items: ["React.js", "Node.js", "Express.js", "REST APIs", "MongoDB"] },
+  { title: "Tools", icon: Database, items: ["Git", "GitHub", "Jupyter", "Google Colab", "VS Code", "Postman"] },
 ];
 
 const projects = [
+  {
+    title: "Number Plate Detection",
+    type: "AI / Computer Vision",
+    description: "A Python-based computer vision project focused on detecting and locating vehicle number plates from visual input.",
+    tags: ["Python", "Computer Vision", "Object Detection"],
+    github: "https://github.com/Avanish08/Number-Plate-dect",
+  },
+  {
+    title: "Object & Movement Detection using YOLOv8",
+    type: "AI / Computer Vision",
+    description: "An object and movement detection project using YOLOv8 to identify objects in visual input and explore movement detection.",
+    tags: ["Python", "YOLOv8", "Computer Vision", "Object Detection"],
+    github: "https://github.com/Avanish08/object-movent-dection-using-yolov8",
+  },
   {
     title: "VAP MERN Project",
     type: "Full-Stack Application",
     description: "A collaborative full-stack application built with the MERN stack, featuring client-server architecture, REST API communication and MongoDB-backed functionality.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
     github: "https://github.com/Avanish08/VAP_MERN_PROJECT",
-  },
-  {
-    title: "Personal Portfolio",
-    type: "Frontend / Deployment",
-    description: "Responsive developer portfolio designed for desktop, tablet and mobile devices, with JavaScript interactions and a Netlify deployment workflow.",
-    tags: ["HTML5", "CSS3", "JavaScript", "Responsive UI", "Netlify"],
-    github: "https://github.com/Avanish08/Portfolio",
-    live: "https://avanishojha.netlify.app/",
   },
   {
     title: "Attendance Management System",
@@ -107,17 +115,17 @@ function App() {
         <section id="home" className="hero section">
           <div className="hero-copy">
             <div className="eyebrow"><span className="pulse" /> Available for opportunities</div>
-            <h1>Building the future with <span>AI & intelligent software.</span></h1>
+            <h1>Building practical <span>AI & Computer Vision</span> solutions.</h1>
             <p className="hero-text">
-              I'm <strong>Avanish Ojha</strong>, an entry-level AI/ML Developer with a software-development
-              foundation. I enjoy turning data and ideas into practical, scalable digital experiences.
+              I'm <strong>Avanish Ojha</strong>, an entry-level AI/ML Developer focused on Python, Machine Learning,
+              Computer Vision and practical AI applications.
             </p>
             <div className="hero-actions">
               <a href="#projects" className="btn primary">Explore my work <ArrowUpRight size={18} /></a>
               <a href={`mailto:${profile.email}`} className="btn secondary">Let's connect <Mail size={17} /></a>
             </div>
             <div className="quick-links">
-              <a href={profile.github || "#"} target="_blank" rel="noreferrer"><Github size={17}/> GitHub</a>
+              <a href={profile.github} target="_blank" rel="noreferrer"><Github size={17}/> GitHub</a>
               <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={17}/> LinkedIn</a>
               <span><MapPin size={17}/> Noida, India</span>
             </div>
@@ -141,13 +149,12 @@ function App() {
           <div className="section-label">01 / About</div>
           <div className="about-grid">
             <div>
-              <h2>Software foundation.<br/><span>AI/ML direction.</span></h2>
+              <h2>AI/ML focus.<br/><span>Software foundation.</span></h2>
             </div>
             <div className="about-copy">
               <p>
                 I’m an engineering graduate focused on growing as an <strong>AI/ML Developer</strong>.
-                My experience in frontend and full-stack development gives me a practical understanding
-                of how intelligent features can become useful products.
+                My software-development experience gives me a practical foundation for building and integrating intelligent applications.
               </p>
               <p>
                 I’m building my capabilities across <strong>Python, machine learning, data analysis,
@@ -156,7 +163,7 @@ function App() {
               </p>
               <div className="stats">
                 <div><strong>2026</strong><span>B.E. Graduate</span></div>
-                <div><strong>MERN</strong><span>Full-stack foundation</span></div>
+                <div><strong>CV</strong><span>Computer Vision</span></div>
                 <div><strong>AI/ML</strong><span>Career focus</span></div>
               </div>
             </div>
@@ -184,7 +191,7 @@ function App() {
           <div className="section-label">03 / Projects</div>
           <div className="section-heading">
             <h2>Selected <span>work.</span></h2>
-            <p>Projects that show my progression from web development toward AI/ML engineering.</p>
+            <p>AI/ML projects first, supported by a strong foundation in full-stack software development.</p>
           </div>
           <div className="projects">
             {projects.map((p, i) => (
@@ -197,7 +204,6 @@ function App() {
                   <div className="tags">{p.tags.map(x => <span key={x}>{x}</span>)}</div>
                   <div className="project-links">
                     <a href={p.github} target="_blank" rel="noreferrer"><Github size={16}/> GitHub</a>
-                    {p.live && <a href={p.live} target="_blank" rel="noreferrer"><ExternalLink size={16}/> Live Demo</a>}
                   </div>
                 </div>
               </article>
@@ -241,7 +247,7 @@ function App() {
           <div className="contact-box">
             <div className="section-label">06 / Contact</div>
             <h2>Let's build something <span>intelligent.</span></h2>
-            <p>I'm currently available for entry-level AI/ML, Machine Learning, Data Science and software development opportunities.</p>
+            <p>I'm currently available for entry-level AI/ML, Computer Vision, Machine Learning, Data Science and Python development opportunities.</p>
             <a className="btn primary" href={`mailto:${profile.email}`}>Start a conversation <ArrowUpRight size={18}/></a>
             <div className="contact-details">
               <a href={`mailto:${profile.email}`}><Mail size={17}/> {profile.email}</a>
