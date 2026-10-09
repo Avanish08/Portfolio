@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avanish Ojha | Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>document.body.classList.add("js","loading")</script>
+<noscript><style>#pre{display:none}</style></noscript>
+<div id="pre" role="status" aria-label="Loading portfolio"><div class="pc"><b class="pn">Avanish Ojha</b><span class="pr">Data analyst</span><div class="pbar"><i id="pf"></i></div><span id="pp">0%</span></div></div>
+<div id="sp" aria-hidden="true"></div>
+<div class="wrap">
+<header class="top"><b>Avanish Ojha</b><button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button><nav id="nav" aria-label="Main"><a href="#projects">Projects</a><a href="#how">Process</a><a href="#tools">Toolkit</a><a href="#contact">Contact</a></nav></header>
+
+<div class="hero">
+<div>
+<span class="pill e" style="--d:0">Open to data analyst roles</span>
+<h1>I turn messy data into decisions people can act on.</h1>
+<p class="e" style="--d:1">Hi, I'm Avanish Ojha, a data analyst who builds dashboards and finds the story inside sales and customer data, using Power BI, SQL, Python and Excel.</p>
+<div class="e" style="--d:2"><a class="btn gold" href="#projects">See my projects</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+</div>
+<div class="dash e" style="--d:3">
+<div class="slicer" role="group" aria-label="Region filter">
+<button data-r="All" aria-pressed="true">All regions</button><button data-r="North" aria-pressed="false">North</button><button data-r="South" aria-pressed="false">South</button><button data-r="West" aria-pressed="false">West</button>
+</div>
+<div class="kpis"><div><small>Revenue</small><b id="k1"></b></div><div><small>Growth</small><b id="k2"></b></div><div><small>Best month</small><b id="k3"></b></div></div>
+<svg id="chart" viewBox="0 0 360 190" aria-label="Monthly revenue bar chart"><line class="ax" x1="6" y1="160" x2="354" y2="160"/><g id="bars"></g></svg>
+<p id="out" aria-live="polite"></p>
+<small class="n">Sample data. Try the filters and click a bar.</small>
+</div>
+</div>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="sub">Each one starts with a business question and ends with something a team can act on.</p>
+<div class="grid2">
+
+<article class="proj">
+<div class="viz"><svg viewBox="0 0 300 120" role="img" aria-label="Sample chart of top products by revenue">
+<g font-family="system-ui,sans-serif" font-size="11" fill="var(--muted)">
+<text x="0" y="18">Product A</text><rect x="70" y="6" width="220" height="16" rx="4" fill="var(--bar)"/>
+<text x="0" y="48">Product B</text><rect x="70" y="36" width="170" height="16" rx="4" fill="var(--bar)"/>
+<text x="0" y="78">Product C</text><rect x="70" y="66" width="120" height="16" rx="4" fill="var(--bar)"/>
+<text x="0" y="108">Product D</text><rect x="70" y="96" width="70" height="16" rx="4" fill="var(--gold)"/></g></svg>
+<small>Illustration of a top-products view</small></div>
+<div class="pb">
+<h3>Sales Performance Dashboard</h3>
+<div class="tags"><span>Power BI</span><span>Excel</span><span>Sep 2026</span></div>
+<dl>
+<dt>Question</dt><dd>Which products and regions drive revenue and profit, and how are sales trending?</dd>
+<dt>What I did</dt><dd>Built an interactive dashboard covering sales, revenue, profit and regional performance that anyone can filter and explore.</dd>
+<dt>What I found</dt><dd>Identified the top-performing products and key sales trends to support business performance analysis.</dd>
+</dl></div>
+</article>
+
+<article class="proj">
+<div class="viz"><svg viewBox="0 0 300 120" role="img" aria-label="Sample chart of customer segments">
+<g font-family="system-ui,sans-serif" font-size="11" fill="var(--muted)">
+<rect x="0" y="30" width="120" height="30" rx="6" fill="var(--bar)"/>
+<rect x="124" y="30" width="86" height="30" rx="6" fill="var(--mint)"/>
+<rect x="214" y="30" width="50" height="30" rx="6" fill="var(--gold)"/>
+<rect x="268" y="30" width="32" height="30" rx="6" fill="var(--rose)"/>
+<text x="0" y="82">Loyal</text><text x="124" y="82">Regular</text><text x="214" y="82">New</text><text x="262" y="100">At risk</text></g></svg>
+<small>Illustration of customer segments</small></div>
+<div class="pb">
+<h3>Customer Data Analysis</h3>
+<div class="tags"><span>SQL</span><span>Python</span><span>Sep 2026</span></div>
+<dl>
+<dt>Question</dt><dd>What do customer transactions say about who buys, how often, and what to do next?</dd>
+<dt>What I did</dt><dd>Analyzed transaction data with SQL and Python: cleaned it, aggregated it and ran exploratory analysis.</dd>
+<dt>What I found</dt><dd>Identified customer trends and turned them into actionable insights.</dd>
+</dl></div>
+</article>
+</div>
+
+<h2 style="font-size:1.6rem;margin:44px 0 16px">Coming next</h2>
+<div class="next">
+<div class="card"><p style="margin:0 0 8px"><span class="st">Building</span></p><h3>Customer churn analysis</h3><p>Which customers are likely to leave, and why. Python and scikit-learn.</p></div>
+<div class="card"><p style="margin:0 0 8px"><span class="st">Building</span></p><h3>Sales forecasting</h3><p>Predicting the next few months from seasonality and trend. Python.</p></div>
+<div class="card"><p style="margin:0 0 8px"><span class="st">Building</span></p><h3>Data analyst job market</h3><p>Which skills and cities are in demand right now.</p></div>
+</div>
+</section>
+
+<section id="how">
+<h2>How I work</h2>
+<p class="sub">The same five steps on every project.</p>
+<ol class="steps">
+<li><b>Ask</b><span>Pin down the business question first.</span></li>
+<li><b>Clean</b><span>Fix duplicates, gaps and messy formats.</span></li>
+<li><b>Explore</b><span>Aggregate and look for patterns.</span></li>
+<li><b>Visualize</b><span>Build dashboards people can use.</span></li>
+<li><b>Recommend</b><span>Turn findings into clear actions.</span></li>
+</ol>
+</section>
+
+<section id="tools">
+<h2>Toolkit</h2>
+<p class="sub">What I reach for, and what I use it for.</p>
+<div class="tools">
+<div class="tool" style="--c:var(--gold)"><h3>Power BI</h3><p>Interactive dashboards with filters and KPIs.</p></div>
+<div class="tool" style="--c:var(--mint)"><h3>Excel</h3><p>Quick analysis, pivots and reporting.</p></div>
+<div class="tool" style="--c:var(--blue)"><h3>SQL</h3><p>Pulling and aggregating transaction data.</p></div>
+<div class="tool" style="--c:var(--rose)"><h3>Python</h3><p>Cleaning data and exploratory analysis.</p></div>
+</div>
+</section>
+
+<section id="contact" style="padding-bottom:0">
+<div class="cta" style="margin-top:32px">
+<h2>Have a dataset that needs answers?</h2>
+<p>I'm open to data analyst roles and internships. Email is the quickest way to reach me.</p>
+<a class="btn gold" href="mailto:ak.dis0302@gmail.com">ak.dis0302@gmail.com</a>
+<a class="btn ghost" href="https://github.com/Avanish08">GitHub</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/avanishojha08">LinkedIn</a>
+</div>
+</section>
+<footer>&copy; 2026 Avanish Ojha</footer>
+</div>
+
+<script>
+(function(){
+var M=["Apr","May","Jun","Jul","Aug","Sep"];
+var D={All:[42,48,45,60,68,75],North:[16,18,15,22,25,27],South:[12,14,15,17,19,22],West:[14,16,15,21,24,26]};
+var reg="All",sel=5,NS="http://www.w3.org/2000/svg",g=document.getElementById("bars"),bars=[];
+M.forEach(function(m,i){
+var r=document.createElementNS(NS,"rect");
+r.setAttribute("class","bar");r.setAttribute("x",18+i*56);r.setAttribute("y",30);r.setAttribute("width",38);r.setAttribute("height",130);r.setAttribute("rx",5);
+r.setAttribute("tabindex",0);r.setAttribute("role","button");r.style.transform="scaleY(0)";
+r.addEventListener("click",function(){sel=i;upd()});
+r.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();sel=i;upd()}});
+g.appendChild(r);bars.push(r);
+var t=document.createElementNS(NS,"text");t.setAttribute("class","mo");t.setAttribute("x",37+i*56);t.setAttribute("y",178);t.textContent=m;g.appendChild(t);
+});
+function upd(){
+var v=D[reg],tot=v.reduce(function(a,b){return a+b},0);
+bars.forEach(function(r,i){r.style.transform="scaleY("+(v[i]/80)+")";r.classList.toggle("on",i===sel);r.setAttribute("aria-label",M[i]+": "+v[i]+" lakh")});
+document.getElementById("k1").textContent="\u20B9"+tot+" L";
+var gr=Math.round((v[5]/v[0]-1)*100);document.getElementById("k2").textContent="+"+gr+"%";
+document.getElementById("k3").textContent=M[v.indexOf(Math.max.apply(null,v))];
+document.getElementById("out").textContent=M[sel]+", "+(reg==="All"?"all regions":reg)+": \u20B9"+v[sel]+" lakh";
+}
+document.querySelectorAll(".slicer button").forEach(function(b){
+b.addEventListener("click",function(){reg=b.dataset.r;document.querySelectorAll(".slicer button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});upd()});
+});
+requestAnimationFrame(function(){requestAnimationFrame(upd)});
+})();
+</script>
+<script>
+(function(){
+var b=document.body,pre=document.getElementById("pre"),pf=document.getElementById("pf"),pp=document.getElementById("pp");
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var h=document.querySelector(".hero h1"),words=h.textContent.trim().split(/\s+/);
+h.textContent="";
+words.forEach(function(w,i){var s=document.createElement("span");s.className="w";s.style.setProperty("--i",i);s.textContent=w;h.appendChild(s);if(i<words.length-1)h.appendChild(document.createTextNode(" "))});
+var els=[].slice.call(document.querySelectorAll("section>h2,.sub,.proj,.card,.steps li,.tool,.cta"));
+els.forEach(function(el){el.classList.add("rv");var p=el.parentNode;p._n=p._n||0;el.style.setProperty("--i",p._n++)});
+function reveal(){
+if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in","done")});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var e=x.target;e.classList.add("in");io.unobserve(e);setTimeout(function(){e.classList.add("done")},1500)}})},{threshold:.15});
+els.forEach(function(e){io.observe(e)});
+}
+var sp=document.getElementById("sp");
+function sc(){var d=document.documentElement,m=d.scrollHeight-d.clientHeight;sp.style.transform="scaleX("+(m>0?d.scrollTop/m:0)+")"}
+addEventListener("scroll",sc,{passive:true});sc();
+var t0=performance.now(),loaded=document.readyState==="complete",fin=false,cur=0;
+addEventListener("load",function(){loaded=true});
+function finish(){
+if(fin)return;fin=true;pf.style.width="100%";pp.textContent="100%";
+setTimeout(function(){pre.classList.add("done");b.classList.remove("loading");b.classList.add("ready");reveal();
+setTimeout(function(){pre.style.display="none"},950)},rm?0:400);
+}
+function tick(now){
+if(fin)return;
+var t=Math.min((now-t0)/(rm?200:2200),1),p=(1-Math.pow(1-t,2.2))*100;
+if(!loaded)p=Math.min(p,88);
+cur=Math.max(cur,p);pf.style.width=cur+"%";pp.textContent=Math.round(cur)+"%";
+if(cur>=100)finish();else requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+setTimeout(finish,5000);
+var tp=document.querySelector(".top"),bg=tp.querySelector(".burger");
+function setMenu(o){tp.classList.toggle("open",o);bg.setAttribute("aria-expanded",o);bg.setAttribute("aria-label",o?"Close menu":"Open menu")}
+bg.addEventListener("click",function(){setMenu(!tp.classList.contains("open"))});
+tp.querySelectorAll("nav a").forEach(function(a){a.addEventListener("click",function(){setMenu(false)})});
+document.addEventListener("click",function(e){if(!tp.contains(e.target))setMenu(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")setMenu(false)});
+addEventListener("resize",function(){if(innerWidth>760)setMenu(false)});
+})();
+</script>
+</body>
+</html>
